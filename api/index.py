@@ -329,6 +329,7 @@ def health():
 
 @app.route("/chat", methods=["POST"])
 def chat():
+
     try:
         data    = request.get_json(silent=True) or {}
         message = (data.get("message") or "").strip()
