@@ -2,7 +2,7 @@
 
 A production-ready **Retrieval-Augmented Generation (RAG)** chatbot for URO-CARE Urology & Andrology Center, Nairobi.
 
-**Stack:** Flask · ChromaDB · OpenAI GPT-4o mini · text-embedding-3-small
+**Stack:** Flask  · NVIDIA( · text-embedding-3-small
 
 ---
 
