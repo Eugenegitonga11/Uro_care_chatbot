@@ -1,5 +1,6 @@
 """
 api/index.py  —  URO-CARE RAG Chatbot — Vercel Serverless
+Uses vector_store.json for embeddings (no startup embedding needed)
 """
 
 import os
@@ -15,24 +16,6 @@ CHAT_MODEL      = "meta/llama-3.1-8b-instruct"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 TOP_K           = 5
 MAX_HISTORY     = 10
-
-# ── Knowledge Base ─────────────────────────────────────────────────────────────
-KNOWLEDGE_BASE = [
-  {"section":"CLINIC OVERVIEW","text":"URO-CARE Urology & Andrology Center — Nairobi's Premier Urology & Andrology Center. A specialist urological and andrological center offering comprehensive diagnosis and treatment for prostate enlargement, erectile dysfunction, infertility, kidney stones, and urinary disorders for men, women and children. MOH-Licensed Medical Facility."},
-  {"section":"CONTACT & LOCATION","text":"Phone: +254 112 288 709. WhatsApp: https://wa.me/254112288709. Email: info@urocare.co.ke. Address: 4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi, Kenya. Opening Hours: Monday to Friday 9:00 AM to 5:00 PM. Saturday 10:00 AM to 3:00 PM. Sunday Closed."},
-  {"section":"ABOUT URO-CARE","text":"Founded 2024 in Nairobi. 7+ years of excellence in specialist care. 5000+ patients served. 5+ specialist doctors. 98% patient satisfaction rate. 4.9 star patient rating. Mission: To revolutionise urological and andrological healthcare in Kenya. MOH-licensed facility with state-of-the-art diagnostic technology. In-house laboratory, pharmacy and imaging all under one roof. 100% confidentiality for all men's health and andrology cases. Same-week specialist appointments no referral required. Multidisciplinary team of fellowship-trained urologists andrologists and support specialists."},
-  {"section":"SPECIALIST TEAM","text":"Lead Urologist Dr JK: Specialty Urology and Andrology. Over 15 years clinical expertise. Focus: Urological surgery, kidney stone management, prostate disease, men's sexual health. Fellowship trained in advanced endourology. Andrologist Dr SM: Specialty Male Reproductive Medicine. Focus: Male infertility, erectile dysfunction, hormonal disorders, microsurgical techniques. Fellowship in reproductive urology completed in Europe. Paediatric Urologist Dr AN: Specialty Paediatric Urology. Focus: Congenital anomalies, undescended testes, hypospadias, paediatric reconstructive urological surgery."},
-  {"section":"SERVICES - ERECTILE DYSFUNCTION","text":"ED and Andrology services. Comprehensive workup including hormonal panels, penile doppler ultrasound, semen analysis and varicocele assessment all in one confidential visit. Ultrasonic Shockwave Therapy for ED: Low-intensity acoustic shockwaves restore blood flow and natural erections. Non-invasive, no surgery, no medication. 6 to 12 outpatient sessions. Penile Implants: Inflatable and malleable penile prosthesis for treatment-resistant ED. Surgery 45 to 90 minutes. Implants last 10 to 15 years. PRP Injection: From patient's own blood. Minimally invasive drug-free. 2 to 3 sessions. Results within 3 to 6 weeks. Pelvic Floor Training: Specialist-guided rehabilitation. Evidence-based non-surgical first-line treatment."},
-  {"section":"SERVICES - KIDNEY STONES","text":"Kidney Stone treatments. ESWL Shockwave: Non-surgical breaks stones into passable fragments. No incisions no anaesthesia. Outpatient same-day discharge. Best for smaller upper ureteral stones. Laser Endoscopic Treatment: Minimally invasive laser and plasma endoscopy. Precise same-day procedures no external incisions fast recovery. Better for harder larger lower stones. Early warning signs: severe sharp back or side pain, pain radiating to groin, blood in urine, nausea vomiting, frequent or burning urination."},
-  {"section":"SERVICES - PROSTATE HEALTH","text":"Prostate Health services. Prostate and Cancer Screening: PSA blood test, digital rectal examination DRE, prostate biopsy if indicated. Recommended from age 40 for men with family history and from age 50 for all others. African men have higher genetic risk and should not delay. Early detection saves lives. Prostate cancer is the most common cancer in Kenyan men. Prostate Enlargement BPH Treatment: Diagnosis and treatment of BPH prostatitis and prostate cancer with evidence-based approaches including laser and plasma endoscopic treatments."},
-  {"section":"SERVICES - SURGICAL AND OTHER","text":"Laparoscopic Urinary Surgeries: Keyhole surgery for kidney tumours, ureteral obstruction, bladder conditions, adrenal disorders. Benefits: smaller incisions less pain shorter hospital stays faster recovery. Paediatric Urology: Undescended testes hypospadias congenital urological conditions paediatric reconstructive surgery. Urinary Incontinence: Pelvic floor training sling procedures surgical repair. Treats men and women. Artificial Urinary Sphincter AUS implantation restores voluntary bladder control. Bladder disorders female urology testicular urology UTIs varicocele penile health conditions also treated."},
-  {"section":"LABORATORY SERVICES","text":"State-of-the-art in-house laboratory. Most results same-day within 1 to 3 hours. Tests: PSA Test 1 to 2 hours no fasting avoid vigorous exercise and sexual activity 48 hours beforehand. Semen Analysis sperm count motility morphology volume 2 to 3 hours. Hormone Panel Testosterone FSH LH prolactin DHEA oestradiol 2 to 4 hours no fasting. Kidney Function Tests serum creatinine urea electrolytes eGFR 1 to 2 hours. Urine Analysis and Culture same-day for urinalysis 24 to 48 hours for culture. Full Blood Count 1 hour. Blood Glucose and HbA1c requires 8 to 12 hours fasting. STI Screening Chlamydia gonorrhoea syphilis hepatitis B C HIV 2 to 4 hours. Lipid Profile requires 8 to 12 hours fasting."},
-  {"section":"PHARMACY SERVICES","text":"Fully stocked in-house pharmacy. Same-day dispensing after consultation. Discreet plain unmarked packaging for sensitive medications. Pharmacist consultation included. All major insurers accepted direct billing available. Medications: ED medications PDE5 inhibitors sildenafil tadalafil vardenafil requires prescription. BPH Prostate Medications tamsulosin alfuzosin finasteride dutasteride. Testosterone Hormone Therapy injections gels patches. UTI Antibiotics targeted based on culture results. Kidney Stone Prevention potassium citrate thiazide diuretics allopurinol. Bladder Incontinence Medications mirabegron solifenacin. Pain Management analgesics antispasmodics. Supplements zinc selenium CoQ10 antioxidants omega-3s. Post-Surgical Medication packs."},
-  {"section":"INSURANCE & PAYMENTS","text":"Accepted Insurance at URO-CARE: Allianz Care International Insurance, Africa Medilink, Heritage Insurance Company a member of LIBERTY, Bupa, Optimum Global International Insurance Solutions, Madison Insurance. Direct billing available. Self-pay accepted. For insurance queries call +254 112 288 709."},
-  {"section":"BOOKING & APPOINTMENTS","text":"How to Book: Call +254 112 288 709. WhatsApp https://wa.me/254112288709. Online via website. Email info@urocare.co.ke. Appointment Process: Book - call WhatsApp or online same-week slots no referral needed. Consultation - meet specialist thorough confidential examination. Diagnosis - in-house diagnostics cystoscopy ultrasound labs fast accurate results. Treatment - personalised treatment plan ongoing support structured follow-up. No referral required. Same-week appointments available. First consultation 45 to 60 minutes. Confirmation within 24 hours of online request."},
-  {"section":"FREQUENTLY ASKED QUESTIONS","text":"Do I need a referral? No referral required book directly by calling +254 112 288 709 WhatsApp or online. Is consultation confidential? Yes absolutely all consultations and treatments completely confidential. What insurance accepted? Allianz Care Africa Medilink Heritage Insurance Bupa Optimum Global Madison Insurance. Where is URO-CARE? 4th Floor PMC Building 3rd Parklands Avenue Nairobi. Open Monday to Friday 9am to 5pm Saturday 10am to 3pm. Do you treat men and women? Yes urology treats all patients men women and children. How long does first consultation take? 45 to 60 minutes. What is shockwave therapy for ED? Low-intensity shockwave therapy delivers acoustic pulses stimulating new blood vessel growth improving blood flow. 6 to 12 outpatient sessions no surgery no medication. At what age prostate screening? Age 40 with family history age 50 for all others. Is pharmacy confidential? Yes 100 percent sensitive prescriptions in plain unmarked packaging."},
-  {"section":"KEY DIFFERENTIATORS","text":"Why choose URO-CARE: Fellowship-Trained Specialists international fellowships global best practices. Absolute Confidentiality privacy guaranteed. Advanced In-House Diagnostics urodynamics flexible cystoscopy ultrasound full laboratory. One-Stop Centre consultation diagnostics pharmacy treatment all under one roof 3rd Parklands Avenue Nairobi. Same-Week Appointments no referral required minimal waiting. Insurance Accepted 6 plus major providers including international insurers. Male infertility treatment semen analysis hormonal profiling varicocele repair surgical sperm retrieval. Shockwave therapy LiSWT for ED available — one of few clinics in Kenya offering this."}
-]
 
 SYSTEM_PROMPT = """You are a warm, professional and knowledgeable patient care assistant for URO-CARE Urology & Andrology Center — Nairobi's premier specialist clinic.
 
@@ -57,7 +40,6 @@ Contact info to always have ready:
 {context}
 --- END CONTEXT ---"""
 
-# ── HTML template as a string (no file system needed) ─────────────────────────
 HTML_PAGE = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,20 +126,20 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
 </head>
 <body>
 <div id="status-bar">
-  <div class="sb-left"><div class="sb-dot" id="sbDot"></div><span id="sbText">Connecting to URO-CARE AI…</span></div>
+  <div class="sb-left"><div class="sb-dot" id="sbDot"></div><span id="sbText">Connecting to URO-CARE AI...</span></div>
   <span style="opacity:0.4">RAG · NVIDIA · Llama 3.1</span>
 </div>
 <div class="page-bg" style="padding-top:80px;">
   <p class="page-hero-eyebrow">AI-Powered Patient Assistant</p>
   <h1 class="page-hero-title">Ask URO-CARE<br><em>Anything</em></h1>
-  <p class="page-hero-sub">Our intelligent assistant answers your questions about urology, andrology, kidney stones, prostate health, appointments and more — powered by our verified knowledge base.</p>
+  <p class="page-hero-sub">Our intelligent assistant answers your questions about urology, andrology, kidney stones, prostate health, appointments and more - powered by our verified knowledge base.</p>
   <div class="page-badges">
     <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100% Confidential</span>
     <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Available 24/7</span>
     <span class="badge"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>4th Floor, PMC, Parklands</span>
     <span class="badge"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+254 112 288 709</span>
   </div>
-  <p style="color:var(--muted);font-size:12px;margin-top:8px;">👇 Click the blue chat button in the bottom-right corner to get started</p>
+  <p style="color:var(--muted);font-size:12px;margin-top:8px;">Click the blue chat button in the bottom-right corner to get started</p>
 </div>
 <a href="https://wa.me/254112288709" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -179,7 +161,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
     </div>
     <div class="chat-header-info">
       <div class="chat-header-name">URO-CARE Assistant</div>
-      <div class="chat-header-status"><span class="status-dot"></span>Online — powered by AI</div>
+      <div class="chat-header-status"><span class="status-dot"></span>Online - powered by AI</div>
     </div>
     <button class="chat-header-close" onclick="toggleChat()" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -188,15 +170,15 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
   <div class="chat-powered">Powered by RAG · NVIDIA · Llama 3.1</div>
   <div class="chat-messages" id="chatMessages"></div>
   <div class="chat-quick-replies" id="quickReplies">
-    <button class="qr-btn" onclick="sendQuickReply('Tell me about kidney stone treatment options')">🫘 Kidney Stones</button>
-    <button class="qr-btn" onclick="sendQuickReply('What prostate health services do you offer?')">🩺 Prostate Health</button>
-    <button class="qr-btn" onclick="sendQuickReply('How do I book an appointment?')">📅 Book Appointment</button>
-    <button class="qr-btn" onclick="sendQuickReply('What are your opening hours and location?')">📍 Location & Hours</button>
-    <button class="qr-btn" onclick="sendQuickReply('Do you accept insurance? Which providers?')">🛡️ Insurance</button>
-    <button class="qr-btn" onclick="sendQuickReply('What laboratory tests do you offer?')">🔬 Lab Tests</button>
+    <button class="qr-btn" onclick="sendQuickReply('Tell me about kidney stone treatment options')">Kidney Stones</button>
+    <button class="qr-btn" onclick="sendQuickReply('What prostate health services do you offer?')">Prostate Health</button>
+    <button class="qr-btn" onclick="sendQuickReply('How do I book an appointment?')">Book Appointment</button>
+    <button class="qr-btn" onclick="sendQuickReply('What are your opening hours and location?')">Location & Hours</button>
+    <button class="qr-btn" onclick="sendQuickReply('Do you accept insurance? Which providers?')">Insurance</button>
+    <button class="qr-btn" onclick="sendQuickReply('What laboratory tests do you offer?')">Lab Tests</button>
   </div>
   <div class="chat-input-row">
-    <input type="text" id="chatInput" class="chat-input" placeholder="Ask anything about URO-CARE…" onkeydown="if(event.key==='Enter'&&!event.shiftKey)sendMessage()" maxlength="500" autocomplete="off"/>
+    <input type="text" id="chatInput" class="chat-input" placeholder="Ask anything about URO-CARE..." onkeydown="if(event.key==='Enter'&&!event.shiftKey)sendMessage()" maxlength="500" autocomplete="off"/>
     <button class="chat-send-btn" id="sendBtn" onclick="sendMessage()" aria-label="Send">
       <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
     </button>
@@ -211,19 +193,19 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
   function scrollBottom(){var m=el('chatMessages');if(m)m.scrollTop=m.scrollHeight}
   function setBusy(v){isBusy=v;var b=el('sendBtn'),i=el('chatInput');if(b)b.disabled=v;if(i)i.disabled=v}
   function hideQR(){var q=el('quickReplies');if(!q||q.style.display==='none')return;q.style.transition='opacity 0.2s';q.style.opacity='0';setTimeout(function(){q.style.display='none'},200)}
-  function fmt(t){t=t.replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>');t=t.replace(/(\\+254[\\s\\d]{9,13})/g,'<a href="tel:$1" style="color:#1B5FA8;font-weight:600">$1</a>');t=t.replace(/\\n\\n/g,'<br><br>').replace(/\\n/g,'<br>');return t}
+  function fmt(t){t=t.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');t=t.replace(/(\+254[\s\d]{9,13})/g,'<a href="tel:$1" style="color:#1B5FA8;font-weight:600">$1</a>');t=t.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');return t}
   function checkHealth(){
     fetch('/health').then(function(r){return r.json()}).then(function(d){
-      if(d.status==='ok'){el('sbDot').className='sb-dot ok';el('sbText').textContent='URO-CARE AI ready · '+d.chunks_in_db+' knowledge chunks loaded'}
+      if(d.status==='ok'){el('sbDot').className='sb-dot ok';el('sbText').textContent='URO-CARE AI ready - '+d.chunks_in_db+' knowledge chunks loaded'}
       else throw new Error(d.message)
-    }).catch(function(){el('sbDot').className='sb-dot err';el('sbText').textContent='AI unavailable — call +254 112 288 709'})
+    }).catch(function(){el('sbDot').className='sb-dot err';el('sbText').textContent='AI unavailable - call +254 112 288 709'})
   }
   function addTyping(){var d=el('chatMessages'),e=document.createElement('div');e.className='chat-msg bot';e.id='typing-ind';e.innerHTML='<div class="chat-msg-avatar">UC</div><div class="typing-bubble"><div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div></div>';d.appendChild(e);scrollBottom()}
   function removeTyping(){var t=el('typing-ind');if(t)t.remove()}
   function addUserMsg(text){var d=el('chatMessages'),e=document.createElement('div');e.className='chat-msg user';e.innerHTML='<div><div class="chat-bubble">'+esc(text)+'</div><div class="chat-time">'+now()+'</div></div>';d.appendChild(e);scrollBottom()}
   function addBotMsg(html,sources){
     sources=Array.isArray(sources)?sources:[];
-    var srcHtml=sources.length?'<div class="chat-sources">'+sources.map(function(s){return'<span class="src-pill">&#128218; '+s.section+'</span>'}).join('')+'</div>':'';
+    var srcHtml=sources.length?'<div class="chat-sources">'+sources.map(function(s){return'<span class="src-pill">'+s.section+'</span>'}).join('')+'</div>':'';
     var d=el('chatMessages'),e=document.createElement('div');e.className='chat-msg bot';
     e.innerHTML='<div class="chat-msg-avatar">UC</div><div><div class="chat-bubble">'+html+'</div><div class="chat-time">'+now()+'</div>'+srcHtml+'</div>';
     d.appendChild(e);scrollBottom()
@@ -242,7 +224,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
     .catch(function(){removeTyping();addBotMsg('Technical issue. Please call <strong>+254 112 288 709</strong>.',[])})
     .finally(function(){setBusy(false);var i=el('chatInput');if(i)i.focus()})
   }
-  function startChat(){el('chatMessages').innerHTML='';history=[];addTyping();setTimeout(function(){removeTyping();addBotMsg('Welcome to <strong>URO-CARE</strong>! &#128075; I am your AI patient care assistant, powered by our verified knowledge base.<br><br>I can answer questions about services, lab tests, pharmacy, insurance, appointments and more. How can I help you today?',[]);history.push({role:'assistant',content:'Welcome to URO-CARE! How can I help you today?'})},1200)}
+  function startChat(){el('chatMessages').innerHTML='';history=[];addTyping();setTimeout(function(){removeTyping();addBotMsg('Welcome to <strong>URO-CARE</strong>! I am your AI patient care assistant, powered by our verified knowledge base.<br><br>I can answer questions about services, lab tests, pharmacy, insurance, appointments and more. How can I help you today?',[]);history.push({role:'assistant',content:'Welcome to URO-CARE! How can I help you today?'})},1200)}
   window.toggleChat=function(){
     chatOpen=!chatOpen;var w=el('chat-window'),fo=el('fabOpen'),fc=el('fabClose'),b=el('chatBadge');
     if(chatOpen){w.classList.add('open');if(fo)fo.style.display='none';if(fc)fc.style.display='flex';if(b)b.style.display='none';if(!chatReady){chatReady=true;startChat()}setTimeout(function(){var i=el('chatInput');if(i)i.focus()},400)}
@@ -261,8 +243,8 @@ body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);m
 app = Flask(__name__)
 CORS(app)
 
-_client     = None
-_kb_embeds  = None
+_client      = None
+_vector_store = None
 
 
 def get_client():
@@ -275,63 +257,74 @@ def get_client():
     return _client
 
 
-def get_kb_embeds():
-    global _kb_embeds
-    if _kb_embeds is None:
-        texts = [item["text"] for item in KNOWLEDGE_BASE]
-        resp  = get_client().embeddings.create(
-            model=EMBED_MODEL, input=texts,
-            encoding_format="float",
-            extra_body={"input_type": "passage", "truncate": "END"}
-        )
-        _kb_embeds = [item.embedding for item in resp.data]
-    return _kb_embeds
+def get_vector_store():
+    """Load vector_store.json from the project root."""
+    global _vector_store
+    if _vector_store is None:
+        # Vercel puts files at /var/task/ — find vector_store.json relative to this file
+        base_dir   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        store_path = os.path.join(base_dir, "vector_store.json")
+        if not os.path.exists(store_path):
+            raise RuntimeError(f"vector_store.json not found at {store_path}")
+        with open(store_path, "r", encoding="utf-8") as f:
+            _vector_store = json.load(f)
+    return _vector_store
 
 
 def cosine(a, b):
-    a, b = np.array(a, dtype=np.float32), np.array(b, dtype=np.float32)
+    a = np.array(a, dtype=np.float32)
+    b = np.array(b, dtype=np.float32)
     na, nb = np.linalg.norm(a), np.linalg.norm(b)
     return float(np.dot(a, b) / (na * nb)) if na and nb else 0.0
 
 
 def retrieve(query):
+    """Embed query and find top-k matching chunks from vector_store.json."""
     q_emb = get_client().embeddings.create(
-        model=EMBED_MODEL, input=[query],
+        model=EMBED_MODEL,
+        input=[query],
         encoding_format="float",
         extra_body={"input_type": "query", "truncate": "END"}
     ).data[0].embedding
 
+    store  = get_vector_store()
     scored = sorted(
-        [(cosine(q_emb, e), item) for e, item in zip(get_kb_embeds(), KNOWLEDGE_BASE)],
-        key=lambda x: x[0], reverse=True
+        [(cosine(q_emb, item["embedding"]), item) for item in store],
+        key=lambda x: x[0],
+        reverse=True
     )[:TOP_K]
 
     context = "\n\n---\n\n".join(
-        f"[Section: {item['section']} | Relevance: {round(s*100,1)}%]\n{item['text']}"
+        f"[Section: {item.get('section','General')} | Relevance: {round(s*100,1)}%]\n{item.get('text','')}"
         for s, item in scored
     )
     seen, sources = set(), []
     for s, item in scored:
-        if s > 0.3 and item["section"] not in seen:
-            seen.add(item["section"])
-            sources.append({"section": item["section"], "relevance": round(s*100,1)})
+        sec = item.get("section", "General")
+        if s > 0.3 and sec not in seen:
+            seen.add(sec)
+            sources.append({"section": sec, "relevance": round(s*100,1)})
     return context, sources
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
 @app.route("/")
 def index():
-    return HTML_PAGE, 200, {"Content-Type": "text/html"}
+    return HTML_PAGE, 200, {"Content-Type": "text/html; charset=utf-8"}
 
 
 @app.route("/health")
 def health():
-    return jsonify({
-        "status": "ok",
-        "chunks_in_db": len(KNOWLEDGE_BASE),
-        "chat_model": CHAT_MODEL,
-        "embed_model": EMBED_MODEL,
-    })
+    try:
+        store = get_vector_store()
+        return jsonify({
+            "status":       "ok",
+            "chunks_in_db": len(store),
+            "chat_model":   CHAT_MODEL,
+            "embed_model":  EMBED_MODEL,
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 200
 
 
 @app.route("/chat", methods=["POST"])
@@ -350,12 +343,21 @@ def chat():
         messages.append({"role": "user", "content": message})
 
         resp  = get_client().chat.completions.create(
-            model=CHAT_MODEL, messages=messages, temperature=0.4, max_tokens=600
+            model=CHAT_MODEL,
+            messages=messages,
+            temperature=0.4,
+            max_tokens=600,
         )
-        return jsonify({"reply": resp.choices[0].message.content, "sources": sources})
+        return jsonify({
+            "reply":   resp.choices[0].message.content,
+            "sources": sources
+        })
 
     except Exception as e:
-        return jsonify({"reply": "Technical issue. Please call +254 112 288 709!", "sources": []}), 200
+        return jsonify({
+            "reply":   f"Error: {str(e)}",
+            "sources": []
+        }), 200
 
 
 # Vercel handler
