@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: uro-care-chatbot
-    runtime: python
+    name: urocare-chatbot
+    env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    envVars:
-      - key: OPENAI_API_KEY
-        sync: false
+    startCommand: gunicorn app:app
