@@ -7,7 +7,7 @@ import os
 import json
 import logging
 import numpy as np
-from flask import Flask, request, jsonify, render_template, Response, stream_with_context
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -26,6 +26,13 @@ NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 TOP_K           = 5
 MAX_HISTORY     = 10
 
+# Keywords that trigger the booking form
+BOOKING_KEYWORDS = [
+    "book", "appointment", "schedule", "reserve", "visit",
+    "come in", "see a doctor", "consult", "consultation",
+    "how do i book", "want to book", "make an appointment"
+]
+
 SYSTEM_PROMPT = """You are a warm, professional and knowledgeable patient care assistant for URO-CARE Urology & Andrology Center — Nairobi's premier specialist clinic.
 
 You answer questions ONLY using the context provided below from the URO-CARE knowledge base. If the answer is not in the context, say you don't have that specific information and direct the patient to call +254 112 288 709 or WhatsApp for personalised help.
@@ -37,6 +44,7 @@ Core rules:
 4. Use plain language — no jargon unless explaining a term the patient asked about.
 5. Be reassuring and empathetic, especially for sensitive topics (ED, infertility, STIs).
 6. For emergencies or urgent symptoms, always advise calling +254 112 288 709 immediately.
+7. When a patient wants to book an appointment, let them know you will show them a quick form to get started.
 
 Contact info to always have ready:
 - Phone / WhatsApp: +254 112 288 709
@@ -83,11 +91,11 @@ def cosine_similarity(a, b):
     try:
         a = np.array(a, dtype=np.float32)
         b = np.array(b, dtype=np.float32)
-        norm_a = np.linalg.norm(a)
-        norm_b = np.linalg.norm(b)
-        if norm_a == 0 or norm_b == 0:
+        na = np.linalg.norm(a)
+        nb = np.linalg.norm(b)
+        if na == 0 or nb == 0:
             return 0.0
-        return float(np.dot(a, b) / (norm_a * norm_b))
+        return float(np.dot(a, b) / (na * nb))
     except Exception:
         return 0.0
 
@@ -103,14 +111,11 @@ def embed_query(text):
 
 
 def search(query, k=TOP_K):
-    """Search vector store and return top-k results safely."""
     try:
         q_emb = embed_query(query)
         store = get_vector_store()
-
         if not store:
             return []
-
         scored = []
         for item in store:
             try:
@@ -118,43 +123,34 @@ def search(query, k=TOP_K):
                 scored.append((score, item))
             except Exception:
                 continue
-
         scored.sort(key=lambda x: x[0], reverse=True)
         return scored[:min(k, len(scored))]
-
     except Exception as e:
         logger.error(f"Search error: {e}")
         return []
 
 
 def retrieve_context(query):
-    """Get formatted context string from top results."""
     results = search(query)
     if not results:
         return "No relevant context found."
-
     parts = []
     for score, item in results:
         relevance = round(score * 100, 1)
         section   = item.get("section", "General")
         text      = item.get("text", "")
         parts.append(f"[Section: {section} | Relevance: {relevance}%]\n{text}")
-
     return "\n\n---\n\n".join(parts)
 
 
 def get_sources(query):
-    """Get deduplicated source list for a query."""
     results = search(query)
     seen, sources = set(), []
     for score, item in results:
         section = item.get("section", "General")
         if score > 0.3 and section not in seen:
             seen.add(section)
-            sources.append({
-                "section":   section,
-                "relevance": round(score * 100, 1)
-            })
+            sources.append({"section": section, "relevance": round(score * 100, 1)})
     return sources
 
 
@@ -164,6 +160,12 @@ def build_messages(history, context, user_message):
     messages.extend(history[-(MAX_HISTORY * 2):])
     messages.append({"role": "user", "content": user_message})
     return messages
+
+
+def is_booking_intent(message):
+    """Check if the message contains booking intent."""
+    msg_lower = message.lower()
+    return any(keyword in msg_lower for keyword in BOOKING_KEYWORDS)
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -197,76 +199,34 @@ def chat():
         if not message:
             return jsonify({"error": "No message provided"}), 400
 
+        # Detect booking intent
+        show_booking_form = is_booking_intent(message)
+
         context  = retrieve_context(message)
         messages = build_messages(history, context, message)
-        resp     = get_openai().chat.completions.create(
+
+        resp  = get_openai().chat.completions.create(
             model=CHAT_MODEL,
             messages=messages,
             temperature=0.4,
-            max_tokens=600
+            max_tokens=600,
         )
+        reply   = resp.choices[0].message.content
+        sources = get_sources(message)
+
         return jsonify({
-            "reply":   resp.choices[0].message.content,
-            "sources": get_sources(message)
+            "reply":             reply,
+            "sources":           sources,
+            "show_booking_form": show_booking_form
         })
 
     except Exception as e:
         logger.error(f"Chat error: {e}")
         return jsonify({
-            "reply":   "Technical issue. Please call +254 112 288 709!",
-            "sources": []
+            "reply":             "I'm experiencing a technical issue. Please call +254 112 288 709!",
+            "sources":           [],
+            "show_booking_form": False
         }), 200
-
-
-@app.route("/chat/stream", methods=["POST"])
-def chat_stream():
-    try:
-        data    = request.get_json(silent=True) or {}
-        message = (data.get("message") or "").strip()
-        history = data.get("history") or []
-        if not message:
-            return jsonify({"error": "No message provided"}), 400
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
-
-    def generate():
-        try:
-            context  = retrieve_context(message)
-            messages = build_messages(history, context, message)
-
-            stream = get_openai().chat.completions.create(
-                model=CHAT_MODEL,
-                messages=messages,
-                temperature=0.4,
-                max_tokens=600,
-                stream=True,
-            )
-
-            for chunk in stream:
-                try:
-                    delta = chunk.choices[0].delta
-                    if delta and delta.content:
-                        yield f"data: {json.dumps({'token': delta.content})}\n\n"
-                except (IndexError, AttributeError):
-                    continue
-
-            # Send sources as final event
-            try:
-                sources = get_sources(message)
-            except Exception:
-                sources = []
-
-            yield f"data: {json.dumps({'done': True, 'sources': sources})}\n\n"
-
-        except Exception as e:
-            logger.error(f"Stream error: {e}")
-            yield f"data: {json.dumps({'done': True, 'sources': [], 'error': str(e)})}\n\n"
-
-    return Response(
-        stream_with_context(generate()),
-        mimetype="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}
-    )
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
