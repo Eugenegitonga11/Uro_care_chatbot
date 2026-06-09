@@ -16,9 +16,9 @@
 
 ## SECTION 2: CONTACT & LOCATION
 
-**Phone:** +254 112 288 709
-**WhatsApp:** https://wa.me/254112288709
-**Email:** info@urocare.co.ke
+**Phone:** +254 112 268 709
+**WhatsApp:** https://wa.me/254112268709
+**Email:** admin@urocare.co.ke
 **Address:** 4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi, Kenya
 **Google Maps:** https://maps.google.com/?q=3rd+Parklands+Avenue+Nairobi+PMC
 
@@ -72,7 +72,7 @@
 - Training: Fellowship trained in advanced endourology
 - Procedures: Kidney Stones, Prostate, Andrology, ESWL
 
-**Andrologist (Dr. SM)**
+**Andrologist (Dr. Emmanuel)**
 - Specialty: Male Reproductive Medicine
 - Focus areas: Male infertility, erectile dysfunction, hormonal disorders, microsurgical techniques
 - Training: Fellowship in reproductive urology completed in Europe
@@ -162,6 +162,14 @@
 **Prostate Enlargement (BPH) Treatment**
 - Diagnosis and treatment of BPH, prostatitis and prostate cancer
 - Evidence-based approaches including laser and plasma endoscopic treatments
+
+**Rezūm Water Vapor Therapy for BPH**
+- A modern, minimally invasive solution for enlarged prostate (BPH)
+- Sterile steam is delivered directly into excess prostate tissue, releasing thermal energy that causes it to break down
+- The body naturally absorbs the treated tissue, reducing prostate size and restoring urinary flow
+- No incisions required — performed as an outpatient procedure
+- Faster recovery compared to traditional prostate surgery
+- Suitable for men with BPH looking for an alternative to long-term medication or major surgery
 
 ### 5.5 Surgical Services
 
@@ -348,7 +356,7 @@
 - Call: +254 112 288 709
 - WhatsApp: https://wa.me/254112288709
 - Online: Via the website contact/booking form
-- Email: info@urocare.co.ke
+- Email: admin@urocare.co.ke
 
 **Appointment Process:**
 1. Book Appointment — Call, WhatsApp or book online. Same-week slots available, no referral needed.
@@ -366,7 +374,7 @@
 ## SECTION 11: FREQUENTLY ASKED QUESTIONS
 
 **Do I need a referral to see a urologist at URO-CARE?**
-No referral is required. You can book directly by calling +254 112 288 709, WhatsApp, or the online booking form. Both self-referrals and GP referrals are welcome.
+No referral is required. You can book directly by calling +254 112 268 709, WhatsApp, or the online booking form. Both self-referrals and GP referrals are welcome.
 
 **Is my consultation fully confidential?**
 Yes, absolutely. All consultations and treatments at URO-CARE are completely confidential. URO-CARE understands the sensitive nature of urological and andrological conditions.
@@ -421,6 +429,9 @@ Yes. URO-CARE offers comprehensive male infertility treatment including semen an
 
 **Is shockwave therapy for ED available in Nairobi?**
 Yes. URO-CARE is one of the few clinics in Kenya offering low-intensity ultrasonic shockwave therapy (LiSWT) for erectile dysfunction.
+
+**What is Rezūm Water Vapor Therapy?**
+Rezūm is a minimally invasive treatment for enlarged prostate (BPH) where sterile steam is delivered into excess prostate tissue. The thermal energy causes the tissue to break down and the body naturally absorbs it, reducing prostate size and restoring normal urinary flow. It is an outpatient procedure with faster recovery than traditional surgery and a good alternative for men who want to avoid long-term medication.
 
 ---
 
