@@ -1,6 +1,5 @@
 # URO-CARE Urology & Andrology Center — RAG Knowledge Base
-# Source: https://eugenegitonga11.github.io/Uro-Care-Nairobi/
-# Purpose: Chatbot knowledge base (Retrieval-Augmented Generation)
+# Source: https://www.urocare.co.ke/
 # Last scraped: May 2026
 
 ---
@@ -9,29 +8,30 @@
 
 **Name:** URO-CARE Urology & Andrology Center
 **Tagline:** Nairobi's Premier Urology & Andrology Center
-**Description:** A specialist urological and andrological center offering comprehensive diagnosis and treatment for prostate enlargement, erectile dysfunction, infertility, kidney stones, and urinary disorders for men, women, and children.
+**Website:** https://www.urocare.co.ke
+**Description:** A specialist urological and andrological center offering comprehensive diagnosis and treatment for prostate enlargement, erectile dysfunction, infertility, kidney stones, and urinary disorders for men, women and children.
 **License:** MOH-Licensed Medical Facility
 
 ---
 
 ## SECTION 2: CONTACT & LOCATION
 
-**Phone:** +254 112 268 709
-**WhatsApp:** https://wa.me/254112268709
+**Phone:** +254 112 288 709
+**WhatsApp:** https://wa.me/254112288709
 **Email:** admin@urocare.co.ke
 **Address:** 4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi, Kenya
 **Google Maps:** https://maps.google.com/?q=3rd+Parklands+Avenue+Nairobi+PMC
 
 **Opening Hours:**
-- Monday – Friday: 9:00 AM – 5:00 PM
-- Saturday: 10:00 AM – 3:00 PM
+- Monday to Friday: 9:00 AM to 5:00 PM
+- Saturday: 10:00 AM to 3:00 PM
 - Sunday: Closed
 
 ---
 
 ## SECTION 3: ABOUT URO-CARE
 
-**Founded:** 2024 (Nairobi)
+**Founded:** 2024 in Nairobi
 **Experience:** 7+ years of excellence in specialist care
 **Patients Served:** 5,000+
 **Specialist Doctors:** 5+
@@ -40,297 +40,243 @@
 
 **Mission:** To revolutionise urological and andrological healthcare in Kenya by offering expert medical care, innovative treatments and compassionate patient support.
 
-**Vision:** To elevate urological care in Kenya to international standards, providing world-class services, cutting-edge technology and a patient-first approach that positions URO-CARE as East Africa's most trusted urology and andrology center.
-
-**Core Values:**
-- **Compassion:** Every patient treated with empathy, dignity and genuine care.
-- **Confidentiality:** Absolute privacy in every consultation.
-- **Excellence:** Fellowship-trained specialists committed to highest global clinical standards.
-- **Accessibility:** World-class urological care that is reachable, affordable and without long waits.
+**Core Values:** Compassion, Confidentiality, Excellence, Accessibility
 
 **Key Features:**
 - MOH-licensed facility with state-of-the-art diagnostic technology
-- In-house laboratory, pharmacy and imaging — all under one roof
+- In-house laboratory, pharmacy and imaging all under one roof
 - 100% confidentiality for all men's health and andrology cases
 - Same-week specialist appointments — no referral required
 - Multidisciplinary team of fellowship-trained urologists, andrologists and support specialists
-
-**Milestones:**
-- 2024 — Opened as Nairobi's first dedicated urology & andrology specialist center
-- 2025 — Introduced minimally invasive procedures including male infertility microsurgery and erectile dysfunction treatment programs
-- 2025 — Installed state-of-the-art urodynamics equipment and digital diagnostics imaging
-- 2026 — Continuing to expand specialist team and clinical offerings
 
 ---
 
 ## SECTION 4: SPECIALIST TEAM
 
 **Lead Urologist (Dr. JK)**
-- Specialty: Urology & Andrology
+- Specialty: Urology and Andrology
 - Experience: Over 15 years of clinical expertise
-- Focus areas: Urological surgery, kidney stone management, prostate disease, men's sexual health
-- Training: Fellowship trained in advanced endourology
-- Procedures: Kidney Stones, Prostate, Andrology, ESWL
+- Focus: Urological surgery, kidney stone management, prostate disease, men's sexual health
+- Fellowship trained in advanced endourology
 
-**Andrologist (Dr. Emmanuel)**
+**Andrologist (Dr. SM)**
 - Specialty: Male Reproductive Medicine
-- Focus areas: Male infertility, erectile dysfunction, hormonal disorders, microsurgical techniques
-- Training: Fellowship in reproductive urology completed in Europe
-- Procedures: Infertility, ED Treatment, Hormones, Microsurgery
+- Focus: Male infertility, erectile dysfunction, hormonal disorders, microsurgical techniques
+- Fellowship in reproductive urology completed in Europe
 
 **Paediatric Urologist (Dr. AN)**
 - Specialty: Paediatric Urology
-- Focus areas: Congenital anomalies, undescended testes, hypospadias, paediatric reconstructive urological surgery
-- Procedures: Paediatrics, Reconstruction, Congenital, Surgery
+- Focus: Congenital anomalies, undescended testes, hypospadias, paediatric reconstructive urological surgery
 
 ---
 
 ## SECTION 5: SERVICES
 
-### 5.1 Erectile Dysfunction (ED) & Andrology
+URO-CARE has six dedicated specialist units: Tumour, Prostate, Female Urology, Kidney Stone Management, Male Sexual Health and Paediatric.
 
-**ED & Infertility Diagnosis**
-- Comprehensive workup including hormonal panels, penile doppler ultrasound, semen analysis and varicocele assessment
+### 5.1 TUMOUR UNIT
+
+**Renal (Kidney) Tumour**
+- Diagnosis, CT staging and surgical treatment of kidney tumours
+- Partial and radical nephrectomy performed laparoscopically (keyhole) wherever possible
+- Preserves healthy kidney tissue and speeds recovery
+- Tags: CT Staging, Nephrectomy, Keyhole Surgery
+
+**Bladder Tumour**
+- Prompt evaluation of blood in the urine (haematuria)
+- Diagnostic cystoscopy and endoscopic tumour resection (TURBT)
+- Structured surveillance and follow-up to catch any recurrence early
+- Tags: Cystoscopy, TURBT, Blood in Urine
+
+**Testicular Tumour**
+- Rapid assessment of testicular lumps with scrotal ultrasound and tumour markers
+- Surgical treatment (orchidectomy) where indicated
+- Fertility counselling available
+- Testicular cancer most often affects younger men and is highly curable when caught early
+- Tags: Scrotal Ultrasound, Tumour Markers, Fertility Counselling
+
+**Prostate Cancer**
+- Complete prostate cancer pathway under one roof
+- PSA testing, digital rectal examination, TRUS-guided biopsy, staging and coordinated treatment planning
+- Fellowship-trained uro-oncology team
+- Tags: PSA, TRUS Biopsy, Staging, Men 40+
+
+**Laparoscopic Urinary Surgeries**
+- Keyhole surgery for kidney tumours (nephrectomy), ureteral obstruction (pyeloplasty), bladder conditions and adrenal disorders
+- Benefits: smaller incisions, less pain, shorter stays, faster recovery
+- Tags: Keyhole, Kidney, Bladder, Adrenal
+
+**TRUS Unit — Transrectal Ultrasound and Biopsy**
+- Dedicated transrectal ultrasound (TRUS) unit for precise prostate imaging
+- Accurate volume measurement and assessment of suspicious areas
+- TRUS-guided prostate biopsy under local anaesthesia
+- Clear prep guidance provided before visit
+- Tags: Prostate Imaging, Guided Biopsy, Volume Measurement
+
+### 5.2 PROSTATE UNIT
+
+**Prostate and Cancer Screening Package**
+- PSA blood test, digital rectal examination and prostate biopsy if indicated
+- Recommended for men 40+ with family history, 50+ for all others
+- Early detection saves lives
+- African men have higher genetic risk and should not delay
+- Tags: PSA Test, DRE, Biopsy, Men 40+
+
+**Minimally Invasive BPH Treatment (NEW)**
+Three modern incision-free options for enlarged prostate (BPH):
+
+1. **Rezūm Water Vapor Therapy** — sterile steam shrinks excess prostate tissue naturally. During the quick outpatient procedure, small amounts of sterile steam are delivered directly into excess prostate tissue. The steam releases thermal energy that causes the targeted tissue to break down. The body then naturally absorbs it over several weeks, reducing prostate size and relieving symptoms like frequent urination, weak urine flow and disrupted sleep. No major surgery, no general anaesthesia, no implants. Normal function is preserved.
+
+2. **Laser Treatment** — precise endoscopic laser removal of obstructing tissue with minimal bleeding and fast recovery.
+
+3. **Bipolar (Plasma) Resection** — advanced plasma energy resection, a safer modern evolution of the classic TURP.
+
+All three options: No Incisions, Outpatient, Preserves Function.
+
+### 5.3 FEMALE UROLOGY UNIT
+
+**Urinary Incontinence (Leakage) Treatment**
+- Comprehensive urinary incontinence care
+- Pelvic floor training, sling procedures and surgical repair
+- Restores bladder control and confidence for women and men
+- Tags: Female Urology, Pelvic Floor, Sling Procedure
+
+**Urinary Sphincter Implant (AUS)**
+- Artificial urinary sphincter implantation restores voluntary bladder control in severe incontinence
+- Gold standard treatment after prostate surgery
+- Tags: AUS Implant, Bladder Control, Post-Prostate
+
+### 5.4 KIDNEY STONE MANAGEMENT UNIT
+
+**ESWL — Ultrasonic Shockwave Stone Treatment**
+- One of only TWO ESWL machines of its kind in Kenya — now at URO-CARE
+- Non-surgical ESWL breaks kidney and ureteral stones into passable fragments
+- No incisions, no hospital stay, outpatient procedure with same-day discharge
+- Extracorporeal means outside the body — no instruments enter the patient
+- Thousands of focused shock waves pass harmlessly through body tissue, converging only at the stone
+- Stone is crushed into sand-like fragments that pass naturally in urine
+- Session duration: 45 to 60 minutes
+- Return to normal activity: 1 to 2 days
+- Most patients describe a repetitive tapping sensation, managed with light sedation
+
+**ESWL is ideal when:**
+- Stone is in the kidney or upper ureter
+- Stone is smaller than 2 cm
+- Patient wants to avoid surgery, anaesthesia and hospital admission
+- Patient needs to return to work or family quickly
+
+**Alternatives recommended when:**
+- Stone is larger than 2 cm — PCNL is usually more effective
+- Stone is very hard or in the lower ureter — laser ureteroscopy may clear it in one visit
+- Patient is pregnant, on blood thinners, or has an active urinary infection
+- A urinary blockage needs to be relieved urgently
+
+**ESWL Before/During/After:**
+- Before: consultation, imaging and lab tests; may need to fast; tell us about blood thinners; arrange driver home
+- During: light sedation and pain relief; lie on treatment table; 45 to 60 minutes; rhythmic tapping sensation
+- After: short recovery then home same day; drink plenty of fluids; mild flank soreness or traces of blood in urine for a few days is normal; follow-up imaging confirms stone clearance
+
+**Difference between ESWL and Laser Ureteroscopy:**
+- ESWL: external shockwaves, fully non-invasive, ideal for smaller upper stones
+- Laser ureteroscopy: internal, passes through natural urinary passage, better for harder larger lower stones
+- Specialist recommends the right approach after imaging
+
+### 5.5 MALE SEXUAL HEALTH UNIT
+
+**Erectile Dysfunction and Infertility Diagnosis**
+- Comprehensive ED and male infertility workup including hormonal panels, semen analysis and varicocele assessment
 - All done in one confidential visit
-- Tests: Penile Doppler, Semen Analysis, Hormonal Panel
-- 100% Private
+- Tags: Semen Analysis, Hormonal Panel, 100% Private
 
 **Ultrasonic Shockwave Therapy for ED**
 - Low-intensity acoustic shockwaves restore blood flow and natural erections
 - Non-invasive, no surgery, no medication
-- 6–12 outpatient sessions with lasting results
-- How it works: Shockwaves deliver acoustic pulses to penile tissue, stimulating new blood vessel growth and improving blood flow
+- 6 to 12 outpatient sessions with lasting results
+- Stimulates new blood vessel growth and improves blood flow — the root cause of most ED
+- Tags: Non-Invasive, No Surgery, 6 to 12 Sessions
 
 **Penile Implants for Erectile Dysfunction**
 - Inflatable and malleable penile prosthesis implant surgery
 - For men with treatment-resistant ED
 - Performed by a fellowship-trained andrologist with complete privacy
-- Surgery takes 45–90 minutes under anaesthesia
-- Implants last 10–15+ years
+- Surgery takes 45 to 90 minutes under anaesthesia
+- Implants last 10 to 15+ years
 - Types: Inflatable (most natural feel), Malleable (simpler)
+- Tags: Inflatable, Malleable, Surgical
 
-**PRP (Platelet-Rich Plasma) Injection for ED**
-- Platelet-rich plasma extracted from the patient's own blood
+**PRP Injection for Erectile Dysfunction**
+- Platelet-rich plasma extracted from patient's own blood
 - Stimulates tissue regeneration and improves erectile function naturally
 - Minimally invasive, drug-free
-- Requires 2–3 sessions
-- Results typically appear within 3–6 weeks
+- Requires 2 to 3 sessions
+- Results typically appear within 3 to 6 weeks
+- Tags: PRP, Regenerative, Drug-Free
 
 **Pelvic Floor Training for ED**
 - Specialist-guided pelvic floor muscle rehabilitation
-- Strengthens muscles that support erection
-- Evidence-based, non-surgical first-line treatment for ED
+- Strengthens the muscles that support erection
+- Evidence-based non-surgical first-line treatment for ED
+- Tags: Rehabilitation, Non-Surgical, Evidence-Based
 
-### 5.2 Urinary Incontinence
+### 5.6 PAEDIATRIC UROLOGY UNIT
 
-**Male & Female Urinary Leakage Treatment**
-- Comprehensive care: pelvic floor training, sling procedures and surgical repair
-- Treats both men and women
-- Restores bladder control and confidence
+**Paediatric Urology**
+- Gentle specialist urological care for infants and children
+- Conditions: undescended testes, hypospadias, congenital urinary tract anomalies, recurrent urinary infections
+- Child-friendly, reassuring environment
+- Tags: Children, Congenital Anomalies, Hypospadias, Recurrent UTIs
 
-**Urinary Sphincter Implant (AUS)**
-- Artificial urinary sphincter implantation
-- Restores voluntary bladder control in men with severe incontinence
-- Gold standard treatment after prostate surgery
-
-### 5.3 Kidney Stones
-
-**Ultrasonic Shockwave Stone Treatment (ESWL)**
-- Non-surgical ESWL breaks kidney and ureteral stones into passable fragments
-- No incisions, no anaesthesia
-- Outpatient procedure with same-day discharge
-- Best for: Smaller kidney or upper ureteral stones
-
-**Laser & Plasma Endoscopic Treatment**
-- Minimally invasive laser and plasma endoscopy for kidney stones and prostate enlargement
-- Precise, same-day procedures with no external incisions and fast recovery
-- Laser ureteroscopy: Passes through natural urinary passage; better for harder, larger or lower stones
-
-**Difference between ESWL and Laser:**
-- ESWL: External shockwaves, fully non-invasive, ideal for smaller/upper stones
-- Laser ureteroscopy: Internal, suitable for harder, larger or lower ureteral stones
-- The specialist recommends the right approach after imaging
-
-### 5.4 Prostate Health
-
-**Prostate & Cancer Screening**
-- PSA blood test, digital rectal examination (DRE), and prostate biopsy if indicated
-- Recommended: Men 40+ with family history; Men 50+ for all others
-- African men have higher genetic risk — should not delay
-- Early detection saves lives
-
-**Prostate Enlargement (BPH) Treatment**
-- Diagnosis and treatment of BPH, prostatitis and prostate cancer
-- Evidence-based approaches including laser and plasma endoscopic treatments
-
-**Rezūm Water Vapor Therapy for BPH**
-- A modern, minimally invasive solution for enlarged prostate (BPH)
-- Sterile steam is delivered directly into excess prostate tissue, releasing thermal energy that causes it to break down
-- The body naturally absorbs the treated tissue, reducing prostate size and restoring urinary flow
-- No incisions required — performed as an outpatient procedure
-- Faster recovery compared to traditional prostate surgery
-- Suitable for men with BPH looking for an alternative to long-term medication or major surgery
-
-### 5.5 Surgical Services
-
-**Laparoscopic Urinary Surgeries**
-- Keyhole surgery for: Kidney tumours (nephrectomy), ureteral obstruction (pyeloplasty), bladder conditions, adrenal disorders
-- Benefits: Smaller incisions, less pain, shorter hospital stays, faster recovery
-
-### 5.6 Paediatric Urology
-
-- Specialised care for children
-- Conditions treated: Undescended testes, hypospadias, congenital urological conditions, paediatric reconstructive surgery
-
-### 5.7 Other Urological Conditions Treated
-
-- Bladder disorders (overactive bladder, urinary incontinence, infections, bladder cancer)
-- Female urology
-- Testicular urology
-- Urinary tract infections (UTIs)
-- Varicocele
-- Penile health conditions
+**Nocturnal Enuresis (Bedwetting)**
+- Supportive judgement-free assessment and treatment for children who wet the bed beyond age five
+- Treatment includes: bladder diaries, fluid and voiding routines, enuresis alarm therapy, medication where appropriate
+- Parents guided at every step
+- Tags: Bedwetting, Alarm Therapy, Age 5+, Child-Friendly
 
 ---
 
 ## SECTION 6: LABORATORY SERVICES
 
-**Overview:** State-of-the-art in-house laboratory at the clinic. Most results available same-day within 1–3 hours. No extra travel required — tests processed during the same consultation visit.
+State-of-the-art in-house laboratory. Most results available same-day within 1 to 3 hours. No extra travel required — tests processed during the same consultation visit.
 
-**Laboratory Features:**
-- Most results ready in 1–3 hours
-- Specialist-reviewed reports — not just raw numbers
-- Calibrated, quality-assured equipment
-- Strict sample handling and chain of custody
-- Fully confidential — results shared only with the patient
-
-### Tests Available:
-
-**PSA Test (Prostate-Specific Antigen)**
-- Blood test measuring PSA levels
-- Primary screening tool for prostate health and early prostate cancer detection
-- Recommended for men from age 40–50
-- Results: 1–2 hours
-- Preparation: Avoid vigorous exercise, sexual activity and prostate massage for 48 hours beforehand; no fasting required
-
-**Semen Analysis (Seminogram)**
-- Evaluates: Sperm count, motility, morphology, volume, pH, liquefaction time, white blood cells
-- Also available: Advanced DNA fragmentation testing
-- Used for: Male infertility diagnosis
-- Results: 2–3 hours
-
-**Hormone Panel**
-- Measures: Testosterone (total & free), FSH, LH, prolactin, DHEA, oestradiol
-- Used for: Diagnosing ED, infertility and hormonal imbalances
-- Results: 2–4 hours
-- Note: No fasting required
-
-**Kidney Function Tests (RFTs)**
-- Measures: Serum creatinine, urea, electrolytes and eGFR
-- Used for: Assessing kidney health, monitoring kidney disease, stone patients, pre-procedure assessment
-- Results: 1–2 hours
-
-**Urine Analysis & Culture**
-- Urinalysis: Microscopic examination for red cells, white cells, casts and bacteria
-- Culture: Identifies the specific UTI-causing organism to guide targeted antibiotic therapy
-- Results: Urinalysis same-day; Culture 24–48 hours
-
-**Full Blood Count (FBC)**
-- Measures: Haemoglobin, white cells, platelets, red cell indices
-- Used for: Pre-operative assessment, anaemia, infection, inflammatory conditions
-- Results: 1 hour
-
-**Blood Glucose & HbA1c**
-- Fasting blood glucose and glycated haemoglobin for diabetes monitoring
-- Important since diabetes is a leading cause of erectile dysfunction
-- Results: 1–2 hours
-- Preparation: Requires 8–12 hours fasting
-
-**STI / Infection Screening**
-- Tests for: Chlamydia, gonorrhoea, syphilis, hepatitis B & C, HIV
-- Relevant for: Urethral discharge, epididymo-orchitis, prostatitis, unexplained male infertility
-- Results: 2–4 hours
-
-**Lipid Profile & Cardiovascular Panel**
-- Measures: Total cholesterol, HDL, LDL, triglycerides, cardiovascular risk markers
-- Important for ED management (vascular health is linked to erectile function)
-- Results: 2–3 hours
-- Preparation: Requires 8–12 hours fasting
-
-**Fasting Requirement Summary:**
-- Tests requiring fasting (8–12 hours): Blood glucose, lipid profile, HbA1c
-- Tests NOT requiring fasting: PSA, hormone panels, FBC, kidney function
+**Tests Available:**
+- PSA Test (1 to 2 hours, no fasting required, avoid vigorous exercise and sexual activity 48 hours beforehand)
+- Semen Analysis — sperm count, motility, morphology, volume, pH (2 to 3 hours)
+- Hormone Panel — Testosterone total and free, FSH, LH, prolactin, DHEA, oestradiol (2 to 4 hours, no fasting)
+- Kidney Function Tests — serum creatinine, urea, electrolytes, eGFR (1 to 2 hours)
+- Urine Analysis and Culture (same-day for urinalysis, 24 to 48 hours for culture)
+- Full Blood Count (1 hour)
+- Blood Glucose and HbA1c (requires 8 to 12 hours fasting)
+- STI Screening — Chlamydia, gonorrhoea, syphilis, hepatitis B and C, HIV (2 to 4 hours)
+- Lipid Profile and Cardiovascular Panel (requires 8 to 12 hours fasting)
 
 ---
 
 ## SECTION 7: PHARMACY SERVICES
 
-**Overview:** Fully stocked in-house pharmacy at the clinic. Prescriptions filled immediately after consultation — no extra trips. Discreet packaging for sensitive medications.
+Fully stocked in-house pharmacy. Same-day dispensing immediately after consultation. Discreet plain unmarked packaging for sensitive medications. All major insurers accepted with direct billing.
 
-**Pharmacy Features:**
-- Same-day dispensing immediately after consultation
-- Discreet plain, unmarked packaging for sensitive medications
-- Pharmacist consultation included — explains dosing, interactions and storage
-- All major insurers accepted — direct billing available
-- Licensed, regulated and quality-verified medications only
-- Exclusively sourced from licensed, registered pharmaceutical suppliers
-
-### Medications Dispensed:
-
-**Erectile Dysfunction Medications**
-- PDE5 inhibitors: sildenafil, tadalafil, vardenafil
-- Other evidence-based ED treatments
-- Requires valid prescription from URO-CARE urologist — not dispensed without prescription
-
-**BPH & Prostate Medications**
-- Alpha-blockers: tamsulosin, alfuzosin
-- 5-alpha reductase inhibitors: finasteride, dutasteride
-- Combination therapy for benign prostate enlargement and LUTS
-
-**Testosterone & Hormone Therapy**
-- Testosterone replacement therapy (injections, gels, patches)
-- Clomiphene citrate and other hormonal agents
-- Used for: Hypogonadism, male infertility
-
-**UTI & Infection Antibiotics**
-- Targeted antibiotic therapy based on urine culture and sensitivity results
-- Used for: UTIs, prostatitis, epididymo-orchitis, STIs
-
-**Kidney Stone Prevention Drugs**
-- Potassium citrate, thiazide diuretics, allopurinol
-- Tailored to individual stone type to reduce recurrence
-
-**Bladder & Incontinence Medications**
-- Anticholinergics and beta-3 agonists: mirabegron, solifenacin (overactive bladder)
-- Topical oestrogen and other agents for female urinary conditions
-
-**Pain Management**
-- Analgesics, antispasmodics and anti-inflammatories
-- For: Renal colic, post-procedure discomfort, chronic urological pain
-
-**General Health Supplements**
-- Evidence-based supplements: zinc, selenium, CoQ10, antioxidants, omega-3s
-- Recommended for reproductive and urological health as part of holistic treatment
-
-**Post-Surgical Medications**
-- Complete post-operative medication packs
-- For patients following: ESWL, endoscopy, laparoscopic surgery, implant procedures
-- Includes: Antibiotics, pain relief, wound care
-
-**Note on External Prescriptions:**
-- Pharmacy primarily serves URO-CARE patients
-- External prescriptions may be accepted — call +254 112 288 709 to confirm stock availability
+**Medications dispensed include:**
+- Erectile Dysfunction medications (PDE5 inhibitors: sildenafil, tadalafil, vardenafil — requires valid prescription)
+- BPH and Prostate Medications (tamsulosin, alfuzosin, finasteride, dutasteride)
+- Testosterone and Hormone Therapy (injections, gels, patches, clomiphene citrate)
+- UTI and Infection Antibiotics (targeted based on culture results)
+- Kidney Stone Prevention Drugs (potassium citrate, thiazide diuretics, allopurinol)
+- Bladder and Incontinence Medications (mirabegron, solifenacin)
+- Pain Management (analgesics, antispasmodics, anti-inflammatories)
+- General Health Supplements (zinc, selenium, CoQ10, antioxidants, omega-3s)
+- Post-Surgical Medication packs
 
 ---
 
 ## SECTION 8: FACILITIES
 
-**Reception & Main Facility:** Modern, comfortable and discreet entrance area
-**Visitor's Lounge:** Comfortable waiting area for patients and companions
-**In-House Laboratory:** Diagnostic testing with same-day results
-**Diagnostic Suite:** Advanced urodynamics, cystoscopy, ultrasound equipment
-**Treatment Room:** For procedures and treatments
-**Consultation Suites:** Private specialist consultation rooms
+- Reception and Main Facility
+- Visitors Lounge
+- In-House Laboratory (same-day results)
+- Diagnostic Suite (urodynamics, cystoscopy, ultrasound equipment)
+- ESWL Suite (one of only two ESWL machines of its kind in Kenya)
+- Treatment Rooms
+- Consultation Suites (private specialist rooms)
 
 ---
 
@@ -344,9 +290,9 @@
 5. Optimum Global (International Insurance Solutions)
 6. Madison Insurance
 
-**Direct billing available** for most of these providers at the pharmacy.
-**Self-pay** is also accepted.
-**For insurance queries:** Call +254 112 288 709 to confirm coverage before appointment.
+Direct billing available for most providers. Self-pay also accepted.
+For insurance queries call +254 112 288 709 to confirm coverage before appointment.
+ESWL is covered by most major Kenyan insurance providers — call to confirm your coverage.
 
 ---
 
@@ -355,134 +301,124 @@
 **How to Book:**
 - Call: +254 112 288 709
 - WhatsApp: https://wa.me/254112288709
-- Online: Via the website contact/booking form
+- Online: https://www.urocare.co.ke/contact.php
 - Email: admin@urocare.co.ke
 
 **Appointment Process:**
-1. Book Appointment — Call, WhatsApp or book online. Same-week slots available, no referral needed.
-2. Consultation — Meet your specialist for a thorough, confidential consultation and examination.
-3. Diagnosis — In-house diagnostics (cystoscopy, ultrasound, labs) — fast, accurate results.
-4. Treatment & Care — Personalised treatment plan with ongoing support and structured follow-up care.
+1. Choose a service — browse and select the service matching your symptoms
+2. Book or Call — online form, WhatsApp or call +254 112 288 709
+3. See a Specialist — private thorough consultation with a fellowship-trained urologist
+4. Treatment Plan — same-day diagnostic results and personalised treatment plan
 
-**No referral required** — patients can self-refer directly.
-**Same-week appointments** are usually available.
-**First consultation duration:** Typically 45–60 minutes, includes detailed medical history, physical examination, and discussion of findings and next steps.
-**Appointment confirmation:** Team contacts patient within 24 hours of an online request.
+No referral required. Same-week appointments usually available. First consultation: 45 to 60 minutes. All consultations 100% confidential.
 
 ---
 
 ## SECTION 11: FREQUENTLY ASKED QUESTIONS
 
-**Do I need a referral to see a urologist at URO-CARE?**
-No referral is required. You can book directly by calling +254 112 268 709, WhatsApp, or the online booking form. Both self-referrals and GP referrals are welcome.
+**Do I need a referral?**
+No referral is required. Book directly by calling +254 112 288 709, WhatsApp or online. Same-week appointments are usually available.
 
-**Is my consultation fully confidential?**
-Yes, absolutely. All consultations and treatments at URO-CARE are completely confidential. URO-CARE understands the sensitive nature of urological and andrological conditions.
+**Is my consultation confidential?**
+Yes, absolutely. All consultations and treatments are completely confidential. No information is shared without explicit written consent.
 
-**What insurance providers do you accept?**
-URO-CARE works with Allianz Care, Africa Medilink, Heritage Insurance (Liberty), Bupa, Optimum Global and Madison Insurance. Patients should contact URO-CARE with their insurance details to confirm coverage before appointment.
+**What insurance do you accept?**
+Allianz Care, Africa Medilink, Heritage Insurance (Liberty), Bupa, Optimum Global and Madison Insurance. Call to confirm coverage before booking.
 
-**Where exactly is URO-CARE located?**
-4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi. Open Mon–Fri 9:00am–5:00pm and Saturday 10:00am–3:00pm.
+**Where is URO-CARE located?**
+4th Floor PMC Building, 3rd Parklands Avenue, Nairobi. Open Monday to Friday 9am to 5pm and Saturday 10am to 3pm.
 
-**Do you treat both men and women?**
-Yes. While URO-CARE specialises in andrology (men's reproductive health), the urology department treats all patients — men, women and children — for conditions including kidney stones, bladder disorders and UTIs.
+**Do you treat men and women?**
+Yes. Urology department treats all patients — men, women and children. For kidney stones, bladder disorders, UTIs and female urology.
 
 **How long does a first consultation take?**
-First consultations typically take 45–60 minutes and include a detailed medical history, physical examination, and discussion of findings and next steps.
+45 to 60 minutes including detailed medical history, physical examination, and discussion of findings.
 
 **What is the best erectile dysfunction treatment in Nairobi?**
-URO-CARE offers multiple ED treatments depending on severity: pelvic floor rehabilitation and shockwave therapy for mild-moderate ED, PRP injections for moderate cases, and penile implant surgery for advanced or treatment-resistant ED. All consultations are confidential.
+URO-CARE offers multiple ED treatments: pelvic floor rehabilitation and shockwave therapy for mild-moderate ED, PRP injections for moderate cases, and penile implant surgery for advanced or treatment-resistant ED. All consultations confidential.
 
-**How does ultrasonic shockwave therapy treat erectile dysfunction?**
-Low-intensity shockwave therapy (LiSWT) delivers acoustic pulses to penile tissue, stimulating new blood vessel growth and improving blood flow — the root cause of most ED. It requires 6–12 short outpatient sessions, no surgery, no medication, and no recovery period.
+**What is Rezūm Water Vapor Therapy and how does it treat enlarged prostate?**
+Rezūm uses the natural energy stored in water vapor (steam) to treat BPH. During the outpatient procedure, small amounts of sterile steam are delivered directly into excess prostate tissue. The steam releases thermal energy causing the targeted tissue to break down. The body naturally absorbs it over several weeks, reducing prostate size and relieving symptoms like frequent urination, weak urine flow and disrupted sleep. No major surgery, no general anaesthesia, no implants. Normal function is preserved.
 
-**What is a penile implant and how long does it last?**
-A penile implant is a surgically inserted device that allows men with severe ED to achieve an erection. Inflatable implants feel most natural; malleable implants are simpler. Both last 10–15+ years. Surgery takes 45–90 minutes under anaesthesia.
+**What is ESWL and how does it treat kidney stones?**
+ESWL stands for Extracorporeal Shock Wave Lithotripsy. It uses precisely focused shock waves generated outside the body to break kidney and ureteric stones into fragments small enough to pass naturally in urine. No cuts, no hospital stay, home the same day. URO-CARE has one of only two ESWL machines of its kind in Kenya.
 
-**What is PRP injection therapy for erectile dysfunction?**
-Platelet-rich plasma (PRP) is extracted from the patient's own blood and injected into penile tissue to promote healing, improve sensitivity and enhance erectile function. It is drug-free, minimally invasive and usually requires 2–3 sessions. Results typically appear within 3–6 weeks.
+**Is ESWL painful?**
+Most patients feel a repetitive tapping or flicking sensation rather than pain. Light sedation and pain relief are given before the session.
 
-**Can urinary leakage (incontinence) be treated without surgery?**
-Yes, in many cases. URO-CARE starts with guided pelvic floor muscle training (Kegel rehabilitation), which can significantly reduce or stop urine leakage. Where conservative treatment is insufficient, minimally invasive sling procedures or a urinary sphincter implant are available.
+**How long does an ESWL session take?**
+45 to 60 minutes. Plan for a half-day visit. You go home the same day.
+
+**What urological tumours does URO-CARE treat?**
+The dedicated Tumour Unit diagnoses and treats prostate cancer, renal (kidney) tumours, bladder tumours and testicular tumours — from screening and biopsy through to laparoscopic keyhole surgery.
+
+**Does URO-CARE offer paediatric urology?**
+Yes. Paediatric Urology unit cares for infants and children with undescended testes, hypospadias, congenital urinary tract anomalies, recurrent urinary infections and nocturnal enuresis (bedwetting) in a gentle child-friendly environment.
 
 **What is a urinary sphincter implant?**
-An artificial urinary sphincter (AUS) is a small discreet device implanted around the urethra, giving voluntary control over urination. It is the gold standard surgical treatment for severe male stress urinary incontinence, especially following prostate surgery.
+An artificial urinary sphincter (AUS) is a small discreet device implanted around the urethra giving voluntary control over urination. Gold standard surgical treatment for severe male stress urinary incontinence, especially following prostate surgery.
 
 **At what age should men start prostate cancer screening?**
-URO-CARE recommends PSA screening from age 40 for men with a family history of prostate cancer, and from age 50 for all others. African men have a higher genetic risk and should not delay.
+From age 40 for men with a family history and from age 50 for all others. African men have higher genetic risk and should not delay.
 
-**What laparoscopic urological surgeries are available?**
-URO-CARE performs laparoscopic (keyhole) surgery for kidney tumours (nephrectomy), kidney obstructions (pyeloplasty), bladder conditions, adrenal tumours and ureteral abnormalities.
-
-**Is the pharmacy confidential?**
-Yes, 100%. Sensitive prescriptions — especially for ED, testosterone therapy and STI treatment — are dispensed in plain, unmarked packaging. No prescription information is shared without explicit written consent.
-
-**Can I get ED medication without a prescription at URO-CARE?**
-No. ED medications are only dispensed with a valid prescription from a URO-CARE urologist or andrologist.
-
-**What are the early warning signs of kidney stones?**
-Symptoms include: severe sharp pain in the back or side (renal colic), pain radiating to the groin, blood in urine (haematuria), nausea, vomiting, and frequent or burning urination.
-
-**Can male infertility be treated in Nairobi?**
-Yes. URO-CARE offers comprehensive male infertility treatment including semen analysis, hormonal profiling, varicocele repair and surgical sperm retrieval. Most causes are treatable when diagnosed early.
-
-**Is shockwave therapy for ED available in Nairobi?**
-Yes. URO-CARE is one of the few clinics in Kenya offering low-intensity ultrasonic shockwave therapy (LiSWT) for erectile dysfunction.
-
-**What is Rezūm Water Vapor Therapy?**
-Rezūm is a minimally invasive treatment for enlarged prostate (BPH) where sterile steam is delivered into excess prostate tissue. The thermal energy causes the tissue to break down and the body naturally absorbs it, reducing prostate size and restoring normal urinary flow. It is an outpatient procedure with faster recovery than traditional surgery and a good alternative for men who want to avoid long-term medication.
+**Is ED and incontinence treatment confidential?**
+Yes, 100%. All andrology and urology consultations — especially ED, penile implants and incontinence — are treated with absolute discretion.
 
 ---
 
-## SECTION 12: HEALTH INFORMATION & BLOG TOPICS
+## SECTION 12: ESWL — DETAILED INFORMATION
 
-**Erectile Dysfunction in Young Men (Kenya):**
-Common causes in young Kenyan men include: high blood pressure, diabetes, stress and anxiety, pornography-related desensitisation, low testosterone, lifestyle factors (smoking, alcohol, obesity), and vascular issues.
+URO-CARE has one of only TWO ESWL (Extracorporeal Shock Wave Lithotripsy) machines of its kind in Kenya.
 
-**Prostate Cancer Risk:**
-Prostate cancer is the most common cancer in Kenyan men. African men have higher genetic risk than other populations. Annual PSA screening is strongly recommended. Early detection significantly improves outcomes.
+**What it is:** The least invasive way to treat kidney stones. Extracorporeal means outside the body — the entire treatment happens without any instrument entering the patient. The machine's therapy head is positioned against the skin and thousands of focused shock waves pass harmlessly through body tissue, converging only at the stone, crushing it into sand-like fragments.
 
-**Male Infertility:**
-Male factor accounts for nearly 50% of infertility cases in couples. Common causes: low sperm count, poor motility, varicocele, hormonal imbalances. All causes are potentially treatable with early diagnosis.
+**Key stats:**
+- 0 incisions
+- 45 to 60 minutes per session
+- Same-day discharge home
+- 1 to 2 days back to normal activity
 
-**Testosterone and ED:**
-Low testosterone (hypogonadism) is a common and treatable cause of erectile dysfunction, low libido, fatigue and infertility. A simple blood test measures total and free testosterone.
+**Four stages:**
+1. Precise Targeting — stone located to the millimetre using imaging
+2. Focused Shock Waves — under light sedation, acoustic pulses pass painlessly through skin and muscle
+3. Fragmentation — repeated pressure waves fracture the stone into fine sand-like fragments
+4. Natural Passage — fragments pass naturally in urine over following days; follow-up imaging confirms clearance
 
-**Kidney Stones:**
-- Types: Kidney stones, ureteral stones
-- Treatments available: ESWL (external shockwaves), laser ureteroscopy, PCNL
-- Prevention medications: Potassium citrate, thiazide diuretics, allopurinol
-
-**Prostate Enlargement (BPH):**
-Modern treatments include laser and plasma endoscopic procedures with minimal downtime — not always requiring traditional surgery.
+**ESWL FAQs:**
+- Is it painful? Most patients feel a repetitive tapping sensation. Light sedation and pain relief given before session.
+- Will one session be enough? Many stones clear after one session. Larger or harder stones sometimes require a repeat treatment a few weeks later.
+- What happens to fragments? Reduced to fine sand-like fragments that pass naturally in urine over following days to weeks. Drink plenty of water.
+- Side effects: Mild flank soreness, light bruising, traces of blood in urine for a few days are common and expected.
+- Is it covered by insurance? URO-CARE works with most major Kenyan insurance providers. Call +254 112 288 709 to confirm coverage.
 
 ---
 
-## SECTION 13: PATIENT TESTIMONIALS
+## SECTION 13: KEY DIFFERENTIATORS
 
-**James O. (Kidney Stone Patient) — ★★★★★**
-"I had struggled with kidney stones for years. URO-CARE gave me a clear diagnosis and the stone was treated in a single session. I'm finally pain-free. Truly exceptional team."
+1. **One of only two ESWL machines of its kind in Kenya** — available at URO-CARE for non-surgical kidney stone treatment
+2. **Rezūm Water Vapor Therapy** — modern minimally invasive BPH treatment available at URO-CARE Nairobi
+3. **Fellowship-Trained Specialists** — international fellowships and global best practices
+4. **Absolute Confidentiality** — 100% privacy guaranteed, especially sensitive andrology cases
+5. **Advanced In-House Diagnostics** — urodynamics, flexible cystoscopy, ultrasound and full laboratory
+6. **One-Stop Centre** — consultation, diagnostics, pharmacy and treatment all under one roof at 3rd Parklands Avenue Nairobi
+7. **Same-Week Appointments** — no referral required, minimal waiting
+8. **Six Specialist Units** — Tumour, Prostate, Female Urology, Kidney Stone Management, Male Sexual Health, Paediatric
+9. **Insurance Accepted** — 6+ major providers including international insurers
 
-**David M. (Men's Health Patient) — ★★★★★**
+---
+
+## SECTION 14: PATIENT TESTIMONIALS
+
+**Noha K. (Kidney Stone Patient) — 5 stars**
+"The team at URO-CARE Urology and Andrology Centre is excellent. I visited for a kidney stone consultation and was impressed by their minimally invasive options. They explained the procedure well and made me feel at ease. It's great to have such high-quality urological care right here in Nairobi. Definitely the best place for prostate and kidney health."
+
+**David M. (Men's Health Patient) — 5 stars**
 "As a man with a very private concern, I was nervous about seeking help. The team made me feel respected and at ease from the very first call. Professional, discreet and effective."
 
-**Grace W. (Parent — Paediatric Patient) — ★★★★★**
+**Grace W. (Parent — Paediatric Patient) — 5 stars**
 "My son needed paediatric urological surgery. The specialist explained everything patiently and the outcome was excellent. We are so grateful to the entire URO-CARE team."
 
 ---
 
-## SECTION 14: KEY DIFFERENTIATORS (WHY CHOOSE URO-CARE)
-
-1. **Fellowship-Trained Specialists** — International fellowships and global best practices in urology and andrology
-2. **Absolute Confidentiality** — Privacy for all consultations, especially sensitive andrology cases; 100% guaranteed
-3. **Advanced In-House Diagnostics** — Urodynamics, flexible cystoscopy, ultrasound and full laboratory with fast, accurate results
-4. **One-Stop Centre** — Consultation, diagnostics, pharmacy and treatment all under one roof at 3rd Parklands Avenue
-5. **Same-Week Appointments** — No referral required, minimal waiting
-6. **No Referral Needed** — Patients book directly
-7. **Insurance Accepted** — 6+ major providers including international insurers
-
----
-
 *End of URO-CARE RAG Knowledge Base*
-*For updates, re-scrape from: https://eugenegitonga11.github.io/Uro-Care-Nairobi/*
+*Source: https://www.urocare.co.ke/*

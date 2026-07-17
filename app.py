@@ -47,7 +47,7 @@ Core rules:
 7. When a patient wants to book an appointment, let them know you will show them a quick form to get started.
 
 Contact info to always have ready:
-- Phone / WhatsApp: +254 112 288 709
+- Phone / WhatsApp: +254 112 268 709
 - Email: info@urocare.co.ke
 - Location: 4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi
 - Hours: Mon-Fri 9 AM-5 PM | Sat 10 AM-3 PM
