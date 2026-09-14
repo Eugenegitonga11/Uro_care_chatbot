@@ -16,7 +16,7 @@ load_dotenv()
 # ── Config ────────────────────────────────────────────────────────────────────
 KB_FILE         = "urocare_rag_knowledge_base.md"
 VECTOR_STORE    = "./vector_store.json"
-EMBED_MODEL     = "nvidia/nv-embedqa-e5-v5"
+EMBED_MODEL = "nvidia/nemotron-3-embed-1b"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 CHUNK_SIZE      = 400
 CHUNK_OVERLAP   = 60

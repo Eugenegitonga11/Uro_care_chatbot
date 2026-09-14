@@ -16,8 +16,8 @@
 
 ## SECTION 2: CONTACT & LOCATION
 
-**Phone:** +254 112 288 709
-**WhatsApp:** https://wa.me/254112288709
+**Phone:** +254 112 268 709
+**WhatsApp:** https://wa.me/254112268709
 **Email:** admin@urocare.co.ke
 **Address:** 4th Floor, PMC Building, 3rd Parklands Avenue, Nairobi, Kenya
 **Google Maps:** https://maps.google.com/?q=3rd+Parklands+Avenue+Nairobi+PMC
@@ -299,8 +299,8 @@ ESWL is covered by most major Kenyan insurance providers — call to confirm you
 ## SECTION 10: BOOKING & APPOINTMENTS
 
 **How to Book:**
-- Call: +254 112 288 709
-- WhatsApp: https://wa.me/254112288709
+- Call: +254 112 268 709
+- WhatsApp: https://wa.me/254112268709
 - Online: https://www.urocare.co.ke/contact.php
 - Email: admin@urocare.co.ke
 

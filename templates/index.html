@@ -97,6 +97,16 @@ body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--
   .float-wa { right: 12px; bottom: 92px; }
   .chat-fab  { right: 12px; bottom: 24px; }
 }
+/* ── booking form ── */
+.booking-form { background:#fff; border-radius:16px; border-bottom-left-radius:4px; padding:16px; box-shadow:0 1px 6px rgba(0,0,0,0.08); max-width:280px; }
+.booking-form label { display:block; font-size:12px; font-weight:600; color:#1B5FA8; margin:10px 0 4px; }
+.booking-form label:first-child { margin-top:0; }
+.booking-form input { width:100%; padding:9px 11px; border:1px solid #dbe3ec; border-radius:9px; font-size:14px; font-family:inherit; box-sizing:border-box; }
+.booking-form input:focus { outline:none; border-color:#1B5FA8; }
+.bf-submit { width:100%; margin-top:14px; padding:11px; background:#25D366; color:#fff; border:none; border-radius:9px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit; }
+.bf-submit:hover { background:#1eb855; }
+.bf-submit:disabled { background:#9fd9b2; cursor:default; }
+.bf-err { color:#c0392b; font-size:12px; margin-top:7px; display:none; }
 </style>
 </head>
 <body>
@@ -228,7 +238,7 @@ body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--
       })
       .catch(function(){
         el('sbDot').className='sb-dot err';
-        el('sbText').textContent='AI unavailable — call +254 112 288 709';
+        el('sbText').textContent='AI unavailable — call +254 112 268 709';
       });
   }
 
@@ -264,29 +274,114 @@ body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--
     d.appendChild(e); scrollBottom();
   }
 
+  /* ── booking form ── */
+  var CLINIC_WA = '254112268709';
+
+  function normalizePhone(raw){
+    var d = String(raw).replace(/[^\d]/g,'');
+    if(d.indexOf('254')===0) return d;
+    if(d.indexOf('0')===0)   return '254'+d.slice(1);
+    if(d.length===9)         return '254'+d;
+    return d;
+  }
+  function validPhone(raw){
+    return /^254(7|1)\d{8}$/.test(normalizePhone(raw));
+  }
+
+  function addBookingForm(){
+    var d=el('chatMessages');
+    var e=document.createElement('div');
+    e.className='chat-msg bot';
+    e.innerHTML='<div class="chat-msg-avatar">UC</div>'+
+      '<div class="booking-form">'+
+        '<label for="bfName">Your name</label>'+
+        '<input type="text" id="bfName" placeholder="e.g. Jane Wanjiru" autocomplete="name">'+
+        '<label for="bfPhone">Phone number</label>'+
+        '<input type="tel" id="bfPhone" placeholder="e.g. 0712 345 678" autocomplete="tel">'+
+        '<div class="bf-err" id="bfErr"></div>'+
+        '<button class="bf-submit" id="bfSubmit">Send via WhatsApp</button>'+
+      '</div>';
+    d.appendChild(e);
+    scrollBottom();
+
+    var nameField  = el('bfName');
+    var phoneField = el('bfPhone');
+    var errBox     = el('bfErr');
+    var submitBtn  = el('bfSubmit');
+
+    function submitBooking(){
+      var name  = (nameField.value  || '').trim();
+      var phone = (phoneField.value || '').trim();
+
+      if(name.length < 2){
+        errBox.textContent='Please enter your name.';
+        errBox.style.display='block';
+        nameField.focus();
+        return;
+      }
+      if(!validPhone(phone)){
+        errBox.textContent='Please enter a valid Kenyan number, e.g. 0712 345 678.';
+        errBox.style.display='block';
+        phoneField.focus();
+        return;
+      }
+
+      errBox.style.display='none';
+      submitBtn.disabled=true;
+      submitBtn.textContent='Opening WhatsApp...';
+      nameField.disabled=true;
+      phoneField.disabled=true;
+
+      var msg='Hello URO-CARE, I would like to book an appointment.'+
+              '\n\nName: '+name+
+              '\nPhone: +'+normalizePhone(phone);
+
+      window.open('https://wa.me/'+CLINIC_WA+'?text='+encodeURIComponent(msg),'_blank');
+
+      addBotMsg('Thanks '+esc(name.split(' ')[0])+'! I\'ve opened WhatsApp with your '+
+                'details filled in. Send the message and our team will confirm your '+
+                'appointment slot.',[]);
+    }
+
+    submitBtn.onclick=submitBooking;
+
+    [nameField, phoneField].forEach(function(f){
+      f.onkeydown=function(ev){
+        if(ev.key==='Enter'){ ev.preventDefault(); submitBooking(); }
+      };
+    });
+
+    setTimeout(function(){ nameField.focus(); },100);
+  }
+
   /* ── non-streaming fetch (fallback) ── */
   function fetchChat(userText){
     setBusy(true);
     addTyping();
     var histSend=history.slice(-20);
+    var ctrl=new AbortController();
+    var killer=setTimeout(function(){ ctrl.abort(); },45000);
     fetch('/chat',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({message:userText,history:histSend})
+      body:JSON.stringify({message:userText,history:histSend}),
+      signal:ctrl.signal
     })
     .then(function(r){ return r.json(); })
     .then(function(d){
       removeTyping();
-      var reply=d.reply||'Sorry, I could not get a response. Please call +254 112 288 709.';
+      var reply=d.reply||'Sorry, I could not get a response. Please call +254 112 268 709.';
       addBotMsg(formatText(reply), d.sources||[]);
+      if(d.show_booking_form){ addBookingForm(); }
       history.push({role:'user',content:userText});
       history.push({role:'assistant',content:reply});
     })
     .catch(function(){
       removeTyping();
-      addBotMsg('Technical issue. Please call <strong>+254 112 288 709</strong>.',[]);
+      addBotMsg('Technical issue. Please call <strong>+254 112 268 709</strong>.',[]);
     })
     .finally(function(){
+      clearTimeout(killer);
       setBusy(false);
       var i=el('chatInput'); if(i) i.focus();
     });
